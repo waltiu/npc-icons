@@ -108,7 +108,7 @@ ${content}
 <script lang="ts" setup>
 defineOptions({
   name: ${JSON.stringify(componentName)},
-  iconStr:${addIconStr ? iconStr : "''"},
+  iconStr:${addIconStr ? `"${iconStr}"` : "''"},
   customOptions:${JSON.stringify({
       ...description,
     })}

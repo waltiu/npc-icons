@@ -23,11 +23,10 @@ export const transformIcon = async (fileUrl, { extName, fileName }) => {
                     iconStr = base64Image
                 } else if (extName === FILE_TYPE_OSS) {
                     const ossUrl = data.toString('utf-8')
-                    code = `<img :src="getUrlPath('${ossUrl}', '${fileName}')" />`
+                    code = `<img src="${ossUrl}" />`
                     iconStr = ossUrl
                 }
                 resolve({
-
                     code,
                     iconStr
                 })

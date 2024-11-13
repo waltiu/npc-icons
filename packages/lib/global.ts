@@ -1,5 +1,5 @@
 import * as icons from './components'
-import iconsDescription from './sources/description.json'
+import iconsDescription from 'sources/description.json'
 
 export interface InstallOptions {
   /** @default `ElIcon` */
