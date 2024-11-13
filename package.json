@@ -1,0 +1,21 @@
+{
+  "name": "npc-icons",
+  "version": "1.0.0",
+  "private": "true",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "pnpm -F demo run start",
+    "instal": "pnpm install"
+  },
+  "author": "waltiu",
+  "license": "ISC",
+  "dependencies": {
+    "npc-icons": "workspace:^",
+    "sources": "workspace:^"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  }
+}

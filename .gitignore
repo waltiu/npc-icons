@@ -1,0 +1,11 @@
+
+# Package Manager
+node_modules
+
+
+
+# Bundle
+dist
+dist.zip
+
+packages/lib/components

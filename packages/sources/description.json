@@ -1,0 +1,19 @@
+{
+    "base":{
+        "label":"基础图标",
+        "description":"项目中用到一些基础icon, 可跨mp模块使用"
+    },
+    "menu":{
+        "label":"菜单图标",
+        "description":"用于工作台菜单展示"
+    },
+    "element-plus":{
+    },
+    "portal":{
+        "label":"npc-portal",
+        "description":"登录，菜单，工作台界面相关ui"
+    },
+    "test":{
+
+    }
+}
