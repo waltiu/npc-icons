@@ -11,7 +11,7 @@
   "type": "module",
   "scripts": {
     "generate": "tsx scripts/generate.ts",
-    "package": "npm run generate && npm run build:dist && npm run build:types",
+    "build": "npm run generate && npm run build:dist && npm run build:types",
     "build:dist": "tsx scripts/build.ts",
     "build:types": "vue-tsc --declaration --emitDeclarationOnly"
   },
