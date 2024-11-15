@@ -7,7 +7,7 @@ import glob from 'fast-glob'
 import { type BuiltInParserName, format } from 'prettier'
 import chalk from 'chalk'
 import { pathComponents } from './paths'
-import { FILE_TYPE_SVG, svgToBase64, transformIcon } from './transform'
+import { FILE_TYPE_OSS, FILE_TYPE_SVG, svgToBase64, transformIcon } from './transform'
 import { findWorkspaceDir } from '@pnpm/find-workspace-dir'
 import { findWorkspacePackages } from '@pnpm/find-workspace-packages'
 
@@ -87,10 +87,10 @@ async function transformToVueComponent(file: string) {
   const { componentName, extName, fileName, description } = await getName(file)
   let content = ''
   let iconStr = ''
-  const addIconStr = description.autoIconStr || extName === '.oss'
+  const addIconStr = description.autoIconStr || extName === FILE_TYPE_OSS
   if (extName === FILE_TYPE_SVG) {
     content = await readFile(file, 'utf-8')
-    iconStr = description.autoIconStr ? svgToBase64(content) : ""
+    iconStr = addIconStr ? svgToBase64(content) : ""
   } else {
     const data = await transformIcon(file, {
       extName,
